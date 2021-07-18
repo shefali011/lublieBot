@@ -1,5 +1,6 @@
 A simple discord bot which sends a random quote when a command for the same is given.
 You can add this bot to your server by using this link: https://discord.com/api/oauth2/authorize?client_id=865865473940521001&permissions=2048&scope=bot
+
 It recognizes the following commands:
 1.	‘-quote’: sends a random quote
 2.	‘-bts’: sends a random quote by BTS without information about who said it and where
