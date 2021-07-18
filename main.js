@@ -1,21 +1,24 @@
+const keepAlive = require("./server")
+const prefix = process.env['prefix'];
+const token = process.env['token'];
+const suggestions = process.env['suggestions'];
 const Discord = require('discord.js');
-const { prefix, token, suggestions } = require('./config.json');
 const client = new Discord.Client();
 const fetch = require("node-fetch");
 const data = [
   "The commands are: ",
-  "‘-quote’: sends a random quote",
-  "‘-bts’: sends a random quote by BTS without information about who said it and where",
-  "‘-bts source’: sends a random quote by BTS with information about who said it and where",
-  "‘-bts j-hope’ or ‘-bts jhope’: sends a random quote by J-Hope of BTS",
-  "‘-bts jin’: sends a random quote by Jin of BTS",
-  "‘-bts rm’: sends a random quote by RM of BTS",
-  "‘-bts suga’: sends a random quote by Suga of BTS",
-  "‘-bts v’: sends a random quote by V of BTS",
-  "‘-bts jungkook’: sends a random quote by Jungkook of BTS",
-  "‘-bts jimin’: sends a random quote by Jimin of BTS",
-  "‘-source’: send information about where the quote was spoken corresponding to the previous ‘-bts’ command",
-  "‘-suggestions’: sends a google form where the user can give suggestions to improve this bot"
+  "‘-quote’ : sends a random quote",
+  "‘-bts’ : sends a random quote by BTS without information about who said it and where",
+  "‘-bts source’ : sends a random quote by BTS with information about who said it and where",
+  "‘-bts j-hope’ or ‘-bts jhope’ : sends a random quote by J-Hope of BTS",
+  "‘-bts jin’ : sends a random quote by Jin of BTS",
+  "‘-bts rm’ : sends a random quote by RM of BTS",
+  "‘-bts suga’ : sends a random quote by Suga of BTS",
+  "‘-bts v’ : sends a random quote by V of BTS",
+  "‘-bts jungkook’ : sends a random quote by Jungkook of BTS",
+  "‘-bts jimin’ : sends a random quote by Jimin of BTS",
+  "‘-source’ : send information about where the quote was spoken corresponding to the previous ‘-bts’ command",
+  "‘-suggestions’ : sends a google form where the user can give suggestions to improve this bot"
 ];
 
 var rand = 0;
@@ -151,4 +154,5 @@ client.on('message', message => {
   }
 })
 
+keepAlive();
 client.login(token);

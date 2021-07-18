@@ -1,0 +1,26 @@
+{
+  "name": "lublieBot",
+  "version": "1.0.0",
+  "description": "A simple discord bot which sends a random quote when a command for the same is given. You can add this bot to your server by using this link: https://discord.com/api/oauth2/authorize?client_id=865865473940521001&permissions=2048&scope=bot",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shefali011/lublieBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shefali011/lublieBot/issues"
+  },
+  "homepage": "https://github.com/shefali011/lublieBot#readme"
+}
