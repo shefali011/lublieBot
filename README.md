@@ -12,8 +12,7 @@ It recognizes the following commands:
 8.	‘-bts v’: sends a random quote by V of BTS
 9.	‘-bts jungkook’: sends a random quote by Jungkook of BTS
 10.	‘-bts jimin’: sends a random quote by Jimin of BTS
-11.	‘-source’: send information about where the quote was spoken corresponding to the previous ‘-bts’ command
-12.	‘-suggestions’: sends a google form where the user can give suggestions to improve this bot
+11.	‘-suggestions’: sends a google form where the user can give suggestions to improve this bot
 
 The APIs used are 
 1.	https://bts-quotes-api.herokuapp.com

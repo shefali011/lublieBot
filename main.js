@@ -17,7 +17,6 @@ const data = [
   "‘-bts v’ : sends a random quote by V of BTS",
   "‘-bts jungkook’ : sends a random quote by Jungkook of BTS",
   "‘-bts jimin’ : sends a random quote by Jimin of BTS",
-  "‘-source’ : send information about where the quote was spoken corresponding to the previous ‘-bts’ command",
   "‘-suggestions’ : sends a google form where the user can give suggestions to improve this bot"
 ];
 
@@ -39,15 +38,6 @@ client.on('message', message => {
     case "-suggestions":
       message.channel.send(suggestions + "\n Thank you for your suggestion ^^");
       break;
-    case "-source":
-      fetch("https://bts-quotes-api.herokuapp.com/quotes")
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          message.channel.send("Said by: " + data[rand].member + "\nPlace: " + data[rand].info);
-        });
-      break;
     case '-quote':
       fetch("https://type.fit/api/quotes")
         .then(function (response) {
@@ -65,7 +55,7 @@ client.on('message', message => {
         })
         .then(function (data) {
           var rand = Math.floor(Math.random() * data.length);
-          message.channel.send("'" + data[rand].quote + "'");
+          message.channel.send("'" + data[rand].quote + "'\n by " + data[rand].member);
         });
       break;
     case '-bts source':
